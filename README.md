@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @OmarAI2003
-- 👀 I’m interested in Data Science
-- 🌱 I’m currently learning DSA
+- 👀 I’m interested in Data Science and Open Source
 - 💞️I’m looking to collaborate on open-source projects involving Python
+- 🌱 I’m currently learning math and DSA
 - 🧠 [LeetCode Profile](https://leetcode.com/omaragiez3/)
 
 <!---
