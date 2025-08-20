@@ -18,8 +18,7 @@
 - 🔍 [`i18n-check`](https://github.com/activist-org/i18n-check) - A Python package to automate the validation of keys and values of your i18n and l10n processes.
 
 ### ❤️ GitHub Stats
-
-![Omar's github stats](https://github-readme-stats.vercel.app/api?username=OmarAI2003&show_icons=true)
+![Omar's GitHub stats](https://github-readme-stats.vercel.app/api?username=OmarAI2003&show_icons=true)
 
 ### 🌍 Find me around the web:
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar-a-00046425b/)
