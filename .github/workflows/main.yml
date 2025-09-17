@@ -10,15 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Update README with GitHub Stats
-        run: |
-          curl -sS -o github-stats.svg "https://github-readme-stats.vercel.app/api?username=OmarAl2003"
+      - name: Update GitHub Stats
+        uses: anuraghazra/github-readme-stats@master
+        with:
+          gh_token: ${{ secrets.GH_TOKEN }}
+          show_icons: true
+          hide: 'prs,issues,stars'
+          hide_title: true
+          # Add any other options you need here
           
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add github-stats.svg
-          git commit -m "Update GitHub stats" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
-          git push
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Update GitHub Stats'
+          file_pattern: '**/README.md'
