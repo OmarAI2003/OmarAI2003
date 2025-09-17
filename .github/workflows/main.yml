@@ -10,7 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch and display stats
+      - name: Update README with GitHub Stats
         run: |
-          # Replace 'YOUR-USERNAME' with your GitHub username
-          curl -sS https://github-readme-stats.vercel.app/api?username=YOUR-USERNAME&count_private=true&show_icons=true -H "Authorization: token ${{ secrets.GH_TOKEN }}"
+          curl -sS -o github-stats.svg "https://github-readme-stats.vercel.app/api?username=OmarAl2003"
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add github-stats.svg
+          git commit -m "Update GitHub stats" || echo "No changes to commit"
+          git push
