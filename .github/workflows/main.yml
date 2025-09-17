@@ -13,6 +13,7 @@ jobs:
       - name: Update README with GitHub Stats
         run: |
           curl -sS -o github-stats.svg "https://github-readme-stats.vercel.app/api?username=OmarAl2003"
+          
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -20,3 +21,5 @@ jobs:
           git add github-stats.svg
           git commit -m "Update GitHub stats" || echo "No changes to commit"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
